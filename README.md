@@ -26,16 +26,36 @@ web-tips/
       └─ script.js
 ```
 
-## 記事IDルール
+## 記事ID・フォルダ名ルール
 
-記事は `001-...`, `002-...` のように3桁の連番を付けます。
-Googleスプレッドシート上の記事ID、`articles` 配下のフォルダ名、`docs/images` 配下の画像フォルダ名を揃えます。
+記事IDは `001`, `002`, `003` のように3桁の連番を使用します。
+
+`articles` 配下のフォルダ名は、記事IDだけではなく、**記事ID＋内容を表す短い英語スラッグ**を必須とします。
+
+```text
+{3桁の記事ID}-{英語スラッグ}
+```
+
+スラッグは小文字英数字とハイフンを使用し、記事タイトルから内容が判別できる範囲で短くします。
 
 例:
 
 ```text
-articles/002-intersection-observer-animation/
-docs/images/002-intersection-observer-animation/
+articles/001-countdown-multiple/
+articles/002-gas-setvalues-empty-array/
+articles/003-intersection-observer-animation/
+```
+
+`articles/002/` のように記事IDだけのフォルダは作成しません。
+
+Googleスプレッドシートでは記事IDを3桁の番号で管理し、GitHub URLには上記のフォルダ名を使用します。
+画像フォルダが必要な記事は、`docs/images` 配下も記事フォルダと同じ名前に揃えます。
+
+例:
+
+```text
+articles/003-intersection-observer-animation/
+docs/images/003-intersection-observer-animation/
 ```
 
 ## 公開時の基本ルール
